@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(*c05+7#3$=nt1d%euriog+#xzg-_2oo^hv^cumcshw6b-7mop'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -76,10 +76,14 @@ WSGI_APPLICATION = 'Investsite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-DATABASES = {
+DATABASES ={
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'invest',
+        'USER': 'b_userdb',
+        'PASSWORD': '050208852',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
